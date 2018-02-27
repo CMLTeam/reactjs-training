@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.person {
+  border: #ddd solid 1px;
+}
+
+.people {
+  width: 50%;
+  margin: auto;
+}
