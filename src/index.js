@@ -3,13 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
-import PersonList, {createPerson} from "./Hello";
-
 import 'bootstrap/dist/css/bootstrap.css';
+import App from "./App";
+import {createStore} from "redux";
+import reducer from "./redux/reducer";
+import {Provider} from "react-redux";
+import {createPerson} from "./People";
+
+const store = createStore(reducer);
 
 ReactDOM.render(
-
-    <PersonList/>,
+    <Provider store={store}>
+        <App/>
+    </Provider>,
 
     document.getElementById('root'));
 
